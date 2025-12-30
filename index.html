@@ -1,123 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mohsin | Friendship & Respect</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Moh. Mohsin Zafar Khan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-      color: #333;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    header {
-      background: #1e293b;
-      color: white;
-      padding: 30px 15px;
-      text-align: center;
-    }
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827cc;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#38bdf8;
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    h2 {
-      color: #1e293b;
-      margin-bottom: 10px;
-    }
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,#020617,#020617,#0f172a);
+  color:var(--text);
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
 
-    .highlight {
-      color: #2563eb;
-      font-weight: bold;
-    }
+.hero h1{
+  font-size:3rem;
+  font-weight:600;
+  letter-spacing:1px;
+}
 
-    button {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.hero p{
+  color:var(--muted);
+  margin-top:10px;
+  font-size:1rem;
+}
 
-    button:hover {
-      background: #1e40af;
-    }
+/* SECTION */
+.section{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+}
 
-    footer {
-      background: #1e293b;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
-  </style>
+.card{
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  border-radius:18px;
+  padding:35px;
+  margin-bottom:35px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.card h2{
+  font-weight:500;
+  margin-bottom:12px;
+  color:white;
+}
+
+.card p{
+  line-height:1.7;
+  color:var(--text);
+}
+
+.highlight{
+  color:var(--accent);
+  font-weight:500;
+}
+
+/* BUTTON */
+button{
+  margin-top:15px;
+  padding:10px 22px;
+  border-radius:999px;
+  border:1px solid var(--accent);
+  background:transparent;
+  color:var(--accent);
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:var(--accent);
+  color:#020617;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 15px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+</style>
 </head>
+
 <body>
 
-  <header>
+<section class="hero">
+  <div>
     <h1>Mohsin</h1>
-    <p>Takiya Doraha, District Bhopal</p>
-  </header>
+    <p>Takiya Doraha · District Bhopal</p>
+  </div>
+</section>
 
-  <section>
+<section class="section">
 
-    <div class="card">
-      <h2>About Mohsin</h2>
-      <p>
-        Mohsin is a grounded, hardworking, and respectful individual from 
-        <span class="highlight">Takiya Doraha, District Bhopal</span>.  
-        Known for honesty, dedication, and strong moral values, he believes in
-        long-term relationships built on trust and effort.
-      </p>
-    </div>
+  <div class="card">
+    <h2>About</h2>
+    <p>
+      Mohsin is a calm, grounded, and sincere individual from 
+      <span class="highlight">Takiya Doraha, District Bhopal</span>.
+      His personality reflects honesty, patience, and respect — values that
+      naturally build long-lasting relationships.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>Friendship</h2>
-      <p>
-        True friendship is not about daily talks or constant presence.  
-        It’s about <span class="highlight">respect, loyalty, and standing together</span>
-        in both good and challenging times.
-      </p>
-      <button onclick="showMessage()">Click for Friendship Message</button>
-      <p id="msg" style="margin-top:15px;"></p>
-    </div>
+  <div class="card">
+    <h2>Friendship</h2>
+    <p>
+      Friendship is not measured by time, but by intention.
+      A good friend stands silently when needed and supports loudly when it matters.
+    </p>
+    <button onclick="showQuote()">A Thought on Friendship</button>
+    <p id="quote" style="margin-top:15px;color:var(--muted);"></p>
+  </div>
 
-    <div class="card">
-      <h2>Work & Professional Values</h2>
-      <p>
-        Mohsin is appreciated as a reliable team member and a responsible professional.
-        He works with sincerity, discipline, and a positive mindset, contributing
-        not just effort—but integrity.
-      </p>
-    </div>
+  <div class="card">
+    <h2>Work & Respect</h2>
+    <p>
+      As a professional, Mohsin represents discipline, loyalty, and responsibility.
+      Under <span class="highlight">SHRFI SHUKLA ROYAL Inc</span>,
+      he reflects the values of trust, commitment, and quiet excellence.
+    </p>
+  </div>
 
-  </section>
+</section>
 
-  <footer>
-    © 2025 | Built with respect & simplicity
-  </footer>
+<footer>
+  Built with respect • Minimal • Timeless
+</footer>
 
-  <script>
-    function showMessage() {
-      document.getElementById("msg").innerText =
-        "A good friend is one who understands your silence and respects your journey.";
-    }
-  </script>
+<script>
+function showQuote(){
+  document.getElementById("quote").innerText =
+  "True respect is earned quietly through consistency, not words.";
+}
+</script>
 
 </body>
 </html>
